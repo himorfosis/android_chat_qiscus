@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_30sdp">
+
+        <TextView
+            style="@style/textH2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:text="Selamat Datang Kembali" />
+
+        <TextView
+            style="@style/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:text="Masuk untuk melanjutkan" />
+
+        <TextView
+            style="@style/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User ID" />
+
+        <EditText
+            android:id="@+id/userId"
+            style="@style/inputData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan User ID"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            />
+
+        <TextView
+            style="@style/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:text="Username" />
+
+        <EditText
+            android:id="@+id/usernameEd"
+            style="@style/inputData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Username"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            />
+
+        <TextView
+            style="@style/textLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:text="Kata sandi"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Design.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="false"
+            app:boxStrokeColor="@null"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/toggle_password"
+            app:hintTextAppearance="@style/inputData"
+            >
+
+<!--            app:passwordToggleDrawable="@drawable/ic_password_visible_selector"-->
+
+            <EditText
+                android:id="@+id/passwordEd"
+                style="@style/inputData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan kata sandi"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btnPrimary"
+            android:text="Login"
+            android:layout_marginTop="@dimen/_40sdp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saya belum memiliki akun"
+            android:gravity="center"
+            style="@style/textBody3"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:visibility="gone"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/registerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btnOutline"
+            android:text="Buat Akun Saya"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

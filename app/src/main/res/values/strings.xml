@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">AndroidTemplate</string>
+
+
+    /*
+    Status Response Data
+    */ --------------------------
+
+    <string name="empty_data">Belum Ada Data</string>
+    <string name="empty_data_msg">Maaf, tidak ditemukan hasil.</string>
+    <string name="empty_data_cart_msg">Silahkan tambahkan produk ke keranjang</string>
+
+    <string name="empty_search_data">Pencarian Kosong</string>
+    <string name="empty_search_data_msg">Maaf, tidak ditemukan hasil. Silahkan periksa kembali kata kunci pencarian anda.</string>
+
+    <string name="network_server_error">Terjadi Kesalahan Server</string>
+    <string name="network_server_error_msg">Mohon maaf atas ketidaknyamanan anda, saat ini server sedang dalam gangguan. Mohon kembali lagi nanti, terimakasih.</string>
+
+    <string name="disconnect">Tidak Ada Internet</string>
+    <string name="disconnect_msg">Maaf, sepertinya internet anda sedang bermasalah. Silahkan cek data atau wifi yang anda gunakan.</string>
+
+    <string name="failed_response">Response Gagal</string>
+
+
+    /*
+    Lorem Ipsum
+    */ --------------------------
+
+    <string name="lorem_title">Lorem Ipsum</string>
+    <string name="lorem_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</string>
+    <string name="lorem_rekening">3901 0852 9069</string>
+    <string name="lorem_price_zero">Rp 0</string>
+    <string name="lorem_price_million">Rp 500.000.000</string>
+    <string name="lorem_phone">+62 85660889666</string>
+    <string name="lorem_name">Umar S Himawan</string>
+    <string name="lorem_time_last_ago">2 menit yang lalu</string>
+    <string name="lorem_price">Rp 20.000</string>
+    <string name="lorem_discount">50% off</string>
+    <string name="lorem_porsi">2 porsi</string>
+    <string name="lorem_produk">Sambel Teri Enak</string>
+    <string name="lorem_number">100</string>
+    <string name="lorem_number_item">0 item</string>
+    <string name="lorem_point">10.000 poin</string>
+    <string name="lorem_email">KaveMark@gmail.com</string>
+    <string name="lorem_address">Jl. Mahakam II/2, Kramat Pela. Kebayoran Baru</string>
+    <string name="lorem_user">Andi Rubin</string>
+    <string name="lorem_notif">99+</string>
+    <string name="lorem_date">January 16, 2021</string>
+    <string name="lorem_date_time">18 Mar 2021 - 20:40 WIB</string>
+    <string name="lorem_date_time_shortcut">01j 34m 54d</string>
+    <string name="lorem_null">-</string>
+    <string name="lorem_under_construction">Dalam Tahap Pengembangan</string>
+
+</resources>

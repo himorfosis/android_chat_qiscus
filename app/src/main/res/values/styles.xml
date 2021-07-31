@@ -1,0 +1,318 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="tabStyle">@style/AppTablayoutTheme</item>
+        <item name="android:fontFamily">@font/cerapro_medium</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="titleTextAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="fontFamily">@font/cerapro_medium</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="NoActionBarTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="NavigationTheme" parent="@style/Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/cerapro_regular</item>
+        <item name="background">@android:color/white</item>
+
+    </style>
+
+    <style name="AppTheme.ToolbarStyle" parent="AppTheme">
+        <!--This line changes the color of text in Toolbar-->
+        <item name="android:textColorPrimary">@color/textBlack</item>
+        <!--This line changes the color of icons in toolbar (back, overflow menu icons)-->
+        <item name="android:textColorSecondary">@color/textBlack</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/cerapro_medium</item>
+    </style>
+
+    /*
+    DIALOG
+    */ --------------------------
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_rounded_top_white</item>
+    </style>
+
+    /*
+    FloatingActionButton
+    */ --------------------------
+
+    <style name="ThemeOverlay.App.FloatingActionButton" parent="">
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorOnSecondary">@color/colorPrimary</item>
+        <item name="colorOnSurface">@color/colorPrimary</item>
+    </style>
+
+
+    /*
+    TAB LAYOUT
+    */ --------------------------
+
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">@dimen/_2sdp</item>
+        <item name="tabPaddingStart">@dimen/_5sdp</item>
+        <item name="tabPaddingEnd">@dimen/_5sdp</item>
+        <item name="fontFamily">@font/cerapro_bold</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/colorPrimary</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
+    </style>
+
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance.App.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    /*
+    TEXT MAIN
+    */ --------------------------
+
+    <style name="textBody5" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+    </style>
+
+    <style name="textBody4" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+    </style>
+
+    <style name="textBody3" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+    </style>
+
+    <style name="textBody2" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+    </style>
+
+    <style name="textBody1" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+    </style>
+
+    <style name="textSub5" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/cerapro_medium</item>
+    </style>
+
+    <style name="textSub4" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/cerapro_medium</item>
+    </style>
+
+    <style name="textSub3" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/cerapro_medium</item>
+    </style>
+
+    <style name="textSub2" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:fontFamily">@font/cerapro_medium</item>
+    </style>
+
+    <style name="textSub1" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:fontFamily">@font/cerapro_medium</item>
+    </style>
+
+    <style name="textH5" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/cerapro_bold</item>
+    </style>
+
+    <style name="textH4" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/cerapro_bold</item>
+    </style>
+
+    <style name="textH3" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/cerapro_bold</item>
+    </style>
+
+    <style name="textH2" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:fontFamily">@font/cerapro_bold</item>
+    </style>
+
+    <style name="textH1" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:textSize">@dimen/_22ssp</item>
+        <item name="android:fontFamily">@font/cerapro_bold</item>
+    </style>
+
+    /*
+    TEXT CUSTOM
+    */ --------------------------
+
+    <style name="textLabel" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack3</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+        <item name="android:layout_marginBottom">@dimen/_4sdp</item>
+    </style>
+
+    <style name="textPrice" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/cerapro_bold</item>
+    </style>
+
+    <style name="textPriceDisable" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textBlack3</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+    </style>
+
+    <style name="textDiscount" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textRed</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/cerapro_bold</item>
+    </style>
+
+    <style name="textAction" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/cerapro_bold</item>
+    </style>
+
+    <style name="textNotification" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">8dp</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+    </style>
+
+    /*
+    Animation
+    */ --------------------------
+
+    <style name="AppTablayoutTheme" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextAppearance">@style/TabLayoutStyle</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="fontFamily">@font/cerapro_medium</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="Tablayout" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    /*
+    Animation
+    */ --------------------------
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom</item>
+    </style>
+
+    /*
+    BUTTON
+    */ --------------------------
+
+    <!--  App Compact Button  -->
+
+    <style name="btnPrimary" parent="android:Widget.Button">
+        <item name="android:height">@dimen/_48sdp</item>
+        <item name="android:textColor">@color/textWhite</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:background">@drawable/btn_primary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/cerapro_medium</item>
+    </style>
+
+    <style name="btnOutline" parent="Widget.AppCompat.Button">
+        <item name="android:height">@dimen/_48sdp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:background">@drawable/btn_outline</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/cerapro_medium</item>
+    </style>
+
+    /*
+    EDIT TEXT
+    */ --------------------------
+
+    <style name="inputData" parent="android:Widget.EditText">
+        <item name="android:height">@dimen/_48sdp</item>
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:background">@drawable/btn_outline_gray</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+        <item name="android:padding">@dimen/_15sdp</item>
+        <item name="android:layout_marginTop">@dimen/_6sdp</item>
+    </style>
+
+    <style name="inputDataBorder" parent="android:Widget.EditText">
+        <item name="android:height">@dimen/_48sdp</item>
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:background">@drawable/btn_outline_gray</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+        <item name="android:padding">@dimen/_15sdp</item>
+        <item name="android:layout_marginTop">@dimen/_6sdp</item>
+    </style>
+
+
+</resources>

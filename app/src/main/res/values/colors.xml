@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#006837</color>
+    <color name="colorPrimaryDark">#006837</color>
+    <color name="colorAccent">#006837</color>
+
+    <color name="primary_second">#218A59</color>
+    <color name="primary_third">#4AAD7F</color>
+    <color name="primary_soft">#F4FEF9</color>
+
+    <color name="soft_secondary">#FDFAEF</color>
+
+    <color name="btnSuccess">#27AE60</color>
+    <color name="btnFailed">#EB5757</color>
+
+    <color name="indicator_tablayout">#006837</color>
+
+    <color name="red">#EB5757</color>
+    <color name="green">#27AE60</color>
+    <color name="yellow">#FFC728</color>
+    <color name="toggle_password">#BDBDBD</color>
+    <color name="indicator_unselected">#E0E0E0</color>
+    <color name="white">#ffffff</color>
+    <color name="gray5">#E0E0E0</color>
+
+    /*
+    TEXT
+    */ --------------------------
+
+    <color name="textWhite">#ffffff</color>
+    <color name="textGreen">#006837</color>
+    <color name="textPrimary">#006837</color>
+    <color name="textYellow">#FFC728</color>
+    <color name="textBlack">#303030</color>
+    <color name="textBlack2">#575656</color>
+    <color name="textBlack3">#757575</color>
+    <color name="textBlack4">#9E9E9E</color>
+    <color name="textBlack5">#D3D3D3</color>
+    <color name="textBlack6">#F2F2F2</color>
+    <color name="textRed">#EB5757</color>
+    <color name="textOrange">#F2994A</color>
+    <color name="textBlue">#2F74AB</color>
+
+    /*
+    BUTTON
+    */ --------------------------
+
+    <color name="btnPrimary">#006837</color>
+    <color name="btnDisable">#BDBDBD</color>
+    <color name="btnNaked">#F4FEF9</color>
+
+    /*
+    BACKGROUND
+    */ --------------------------
+
+    <color name="line_input">#E0E0E0</color>
+    <color name="line">#F2F2F2</color>
+    <color name="line_status">#BDBDBD</color>
+    <color name="bg_product">#F6F6F6</color>
+
+    /*
+    LOADING
+    */ --------------------------
+
+    <color name="loading_color">#81868c</color>
+    <color name="loading_item_color">#81868c</color>
+
+    /*
+    LOADING BUTTON
+    */ --------------------------
+
+    <color name="unpressed_color">#fff44336</color>
+    <color name="pressed_color">#ffd32f2f</color>
+    <color name="ripple_color">#ffeeeeee</color>
+    <color name="transparent">#00000000</color>
+    <color name="Black">#000</color>
+    <color name="fbutton_default_color">#3eadeb</color>
+    <color name="fbutton_default_shadow_color">#ff3493c8</color>
+</resources>
