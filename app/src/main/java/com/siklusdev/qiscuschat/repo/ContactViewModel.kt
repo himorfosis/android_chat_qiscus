@@ -15,14 +15,13 @@ import rx.schedulers.Schedulers
 class ContactViewModel@ViewModelInject constructor(
 ): ViewModel()  {
 
-    val createChatState = ActionLiveData<UiState>()
-    val loadContactState = ActionLiveData<UiState>()
+    val contactState = ActionLiveData<UiState>()
 
     val contactResponse = MutableLiveData<List<QiscusAccount?>>()
 
     fun getContacts() {
 
-        loadContactState.sendAction(UiState.Loading)
+        contactState.sendAction(UiState.Loading)
 
         QiscusApi.getInstance().getUsers(1, 100, "")
             .subscribeOn(Schedulers.io())
@@ -30,9 +29,10 @@ class ContactViewModel@ViewModelInject constructor(
             .subscribe(
                 { qiscusAccounts: List<QiscusAccount?>? ->
                     contactResponse.postValue(qiscusAccounts)
+                    contactState.sendAction(UiState.Success)
                 },
                 { throwable: Throwable? ->
-                    loadContactState.postValue(UiState.Error(throwable?.errorMesssage ?: "Gagal"))
+                    contactState.sendAction(UiState.Error(throwable?.errorMesssage ?: "Gagal"))
                 }
             )
     }

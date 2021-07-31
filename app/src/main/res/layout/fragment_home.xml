@@ -1,43 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="Discus"
+                style="@style/textH1"
+                android:textColor="@android:color/white"
+                />
+
+
+            <ImageView
+                android:id="@+id/profileImg"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_account_circle_white_24"
+                />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
-        android:background="@color/primary_soft"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
         >
 
-        <ImageView
-            android:layout_width="@dimen/_60sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/logo_qiscus"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
+        <EditText
+            android:id="@+id/searchEd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/inputSearch"
+            android:hint="Cari Kontak"
             android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:drawableEnd="@drawable/ic_search_gray_24"
+            android:visibility="gone"
             />
 
+        <include
+            android:id="@+id/list"
+            layout="@layout/recycler_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchEd"
+            />
+
+        <ImageButton
+            android:id="@+id/accountBtn"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="@dimen/_16sdp"
+            android:background="@drawable/btn_circle_primary"
+            android:src="@drawable/ic_baseline_chat"
+            app:fabSize="normal" />
+
     </RelativeLayout>
-
-    <include
-        android:id="@+id/list"
-        layout="@layout/recycler_view_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        app:fabSize="normal"
-        android:backgroundTint="@color/colorPrimary"
-        android:layout_margin="@dimen/_16sdp"
-        android:src="@drawable/ic_baseline_chat"
-        />
-
 
 </LinearLayout>

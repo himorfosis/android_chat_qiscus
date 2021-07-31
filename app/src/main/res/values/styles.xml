@@ -192,6 +192,32 @@
     TEXT CUSTOM
     */ --------------------------
 
+    <style name="textSearch" parent="android:Widget.TextView">
+        <item name="android:minHeight">@dimen/_40sdp</item>
+        <item name="android:textColor">@color/textBlack4</item>
+        <item name="android:background">@drawable/bg_outline_gray</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawableEnd">@drawable/ic_search_gray_24</item>
+    </style>
+
+    <style name="inputSearch" parent="android:Widget.EditText">
+        <item name="android:minHeight">@dimen/_45sdp</item>
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingStart">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_16sdp</item>
+        <item name="android:fontFamily">@font/cerapro_regular</item>
+        <item name="android:background">@drawable/bg_outline_gray</item>
+    </style>
+
+
     <style name="textLabel" parent="android:Widget.TextView">
         <item name="android:textColor">@color/textBlack3</item>
         <item name="android:textSize">@dimen/_12ssp</item>

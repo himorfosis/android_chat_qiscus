@@ -1,5 +1,6 @@
 package com.siklusdev.qiscuschat.extensions
 
+import java.text.DateFormat
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
@@ -131,6 +132,38 @@ fun String.convertTimeToTimeAgo(): String {
     }
 }
 
+fun Date?.getLastMessageTimestamp(): String? {
+    return if (this != null) {
+        val todayCalendar = Calendar.getInstance()
+        val localCalendar = Calendar.getInstance()
+        localCalendar.time = this
+        when {
+            todayCalendar.time.getDateStringFromDate()
+                    == localCalendar.time.getDateStringFromDate() -> {
+                this.getTimeStringFromDate()
+            }
+            todayCalendar[Calendar.DATE] - localCalendar[Calendar.DATE] == 1 -> {
+                "Kemarin"
+            }
+            else -> {
+                this.getDateStringFromDate()
+            }
+        }
+    } else {
+        null
+    }
+}
+
+fun Date?.getTimeStringFromDate(): String? {
+    val dateFormat: DateFormat = SimpleDateFormat("HH:mm", Locale("id"))
+    return dateFormat.format(this!!)
+}
+
+fun Date?.getDateStringFromDate(): String? {
+    val dateFormat: DateFormat = SimpleDateFormat("dd MMM yyyy",Locale("id"))
+    return dateFormat.format(this!!)
+}
+
 
 //fun selisihDateTime(startTime: Date, endTime: Date): String? {
 //    val selisihMS = Math.abs(startTime.time - endTime.time)
@@ -184,4 +217,14 @@ fun Date.formatText(pattern: String = "yyyy-MM-dd'T'hh:mm:ss"): String {
     with(sdf) {
         return format(this@formatText)
     }
+}
+
+fun Date?.toFullDate(): String? {
+    val fullDateFormat = SimpleDateFormat("EEEE, MMMM dd, yyyy", Locale("id"))
+    return fullDateFormat.format(this!!)
+}
+
+fun Date?.toTime(): String? {
+    val fullDateFormat = SimpleDateFormat("hh:mm", Locale("id"))
+    return fullDateFormat.format(this!!)
 }

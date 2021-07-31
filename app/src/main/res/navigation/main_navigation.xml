@@ -18,6 +18,10 @@
             android:id="@+id/action_to_contact"
             app:destination="@id/contact" />
 
+        <action
+            android:id="@+id/action_to_profile"
+            app:destination="@id/profile" />
+
     </fragment>
 
     <fragment
@@ -37,6 +41,15 @@
             android:name="avatar"
             app:argType="string" />
 
+        <argument
+            android:name="chat_room"
+            app:argType="com.qiscus.sdk.chat.core.data.model.QiscusChatRoom"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_to_home"
+            app:destination="@id/nav_home" />
+
     </fragment>
 
     <fragment
@@ -50,6 +63,16 @@
             app:destination="@id/nav_chat_room" />
 
     </fragment>
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.siklusdev.qiscuschat.ui.profile.ProfileFragment"
+        android:label="Detail Profil"
+        tools:layout="@layout/fragment_profile">
+
+
+    </fragment>
+
 
 
 </navigation>

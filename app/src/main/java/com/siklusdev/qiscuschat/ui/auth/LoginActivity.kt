@@ -2,6 +2,7 @@ package com.siklusdev.qiscuschat.ui.auth
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.qiscus.sdk.chat.core.QiscusCore
 import com.qiscus.sdk.chat.core.data.model.QiscusAccount
 import com.siklusdev.qiscuschat.common.states.UiState
@@ -11,6 +12,7 @@ import com.siklusdev.qiscuschat.model.request.LoginRequest
 import com.siklusdev.qiscuschat.module.BaseActivity
 import com.siklusdev.qiscuschat.repo.AuthViewModel
 import com.siklusdev.qiscuschat.ui.MainActivity
+import com.siklusdev.qiscuschat.ui.dialog.DialogLoading
 import dagger.hilt.android.AndroidEntryPoint
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.sdk27.coroutines.onClick
@@ -20,11 +22,15 @@ class LoginActivity : BaseActivity() {
 
     private val viewModel by viewModels<AuthViewModel>()
 
+    lateinit var loading: DialogLoading
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        viewModel.logout()
 
         binding.submitBtn.onClick {
 
@@ -39,6 +45,7 @@ class LoginActivity : BaseActivity() {
             } else if (password.isEmpty()) {
                 toast("Harap isi password")
             } else {
+                isLoading()
                 viewModel.login(
                     LoginRequest(
                         user_id = userId,
@@ -52,14 +59,13 @@ class LoginActivity : BaseActivity() {
 
         observe(viewModel.loginState) {
             when (it) {
-                UiState.Loading -> {
-
-                }
                 UiState.Success -> {
+                    stopLoading()
                     startActivity(intentFor<MainActivity>())
                 }
                 is UiState.Error -> {
-                    // toast(it.message)
+                    stopLoading()
+                    toast("Gagal karena ${it.message}")
                 }
             }
         }
@@ -97,8 +103,14 @@ class LoginActivity : BaseActivity() {
 
     }
 
-    private fun startChatting() {
-//        QiscusCore.getI
+    private fun isLoading() {
+        loading = DialogLoading(this)
+        loading.setCancelable(false)
+        loading.show()
+    }
+
+    private fun stopLoading() {
+        loading.dismiss()
     }
 
 }

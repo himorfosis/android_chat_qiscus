@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@android:color/white"
-    tools:context=".ui.SplashScreenActivity">
+    tools:context=".ui.SplashScreenActivity"
+    android:orientation="vertical"
+    >
 
     <ImageView
         android:layout_width="@dimen/_130sdp"
         android:layout_height="@dimen/_100sdp"
-        android:src="@drawable/logo_qiscus"
+        android:src="@drawable/ic_qiscus_logo"
         />
 
 </LinearLayout>

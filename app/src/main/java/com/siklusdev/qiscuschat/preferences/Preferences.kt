@@ -9,34 +9,14 @@ class Preferences @Inject constructor(
     private val preferences: SharedPreferences
 ) {
 
-    var token: String by PreferenceData(
-        preferences,
-        "token",
-        ""
-    )
+    var token: String by PreferenceData(preferences, "token", "")
+    var username: String by PreferenceData(preferences, "username", "")
+    var avatar: String by PreferenceData(preferences, "avatar", "")
+    var email: String by PreferenceData(preferences, "email", "")
 
-    // ACCOUNT
-    var phone: String by PreferenceData(
-        preferences,
-        "phone",
-        ""
-    )
-    var email: String by PreferenceData(
-        preferences,
-        "email",
-        ""
-    )
-    var nama: String by PreferenceData(
-        preferences,
-        "nama",
-        ""
-    )
-
-    var image: String by PreferenceData(
-        preferences,
-        "image",
-        ""
-    )
+    fun clear() {
+        preferences.edit().clear().apply()
+    }
 
 
 }

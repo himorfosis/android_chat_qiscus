@@ -1,5 +1,6 @@
 package com.siklusdev.qiscuschat.preferences
 
+import com.qiscus.sdk.chat.core.data.model.QiscusAccount
 import com.siklusdev.qiscuschat.model.data.AccountData
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -15,26 +16,29 @@ class AccountManager @Inject constructor(
 
     fun getToken() = preferences.token
 
-    fun setProfileAccount(data: AccountData) {
+    fun setAccount(data: QiscusAccount) {
+        preferences.token = data.token
+        preferences.username = data.username
         preferences.email = data.email
-        preferences.nama = data.nama
-        preferences.phone = data.phone
-        preferences.image = data.image
+        preferences.avatar = data.avatar
     }
 
     fun getProfileAccount(): AccountData {
 
         val email = preferences.email
-        val nama = preferences.nama
-        val phone = preferences.phone
-        val image = preferences.image
+        val username = preferences.username
+        val token = preferences.token
+        val avatar = preferences.avatar
 
         return AccountData(
             email = preferences.email,
-            nama =  preferences.nama,
-            phone = preferences.phone,
-            image = preferences.image
+            username =  preferences.username,
+            avatar = preferences.avatar
         )
+    }
+
+    fun logout() {
+        preferences.clear()
     }
 
 }

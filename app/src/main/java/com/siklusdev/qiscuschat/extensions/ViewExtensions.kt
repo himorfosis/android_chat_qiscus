@@ -153,7 +153,7 @@ fun ImageView.loadProfileUrl(
         .load(url)
         .optionalFitCenter()
         .thumbnail(0.1f)
-        .error(R.drawable.ic_broken_image)
+        .error(R.drawable.ic_account_circle_gray_24)
         .circleCrop()
         .apply {
             placeholderResId?.let { placeholder(it) }

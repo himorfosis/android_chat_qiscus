@@ -54,7 +54,8 @@
     */ --------------------------
 
     <color name="line_input">#E0E0E0</color>
-    <color name="line">#F2F2F2</color>
+    <color name="line">#E0E0E0</color>
+<!--    <color name="line">#F2F2F2</color>-->
     <color name="line_status">#BDBDBD</color>
     <color name="bg_product">#F6F6F6</color>
 
